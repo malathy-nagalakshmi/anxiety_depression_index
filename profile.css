@@ -1,0 +1,24 @@
+body
+{
+background-image:url("background_2.jpg");
+color:Silver;
+text-align:center;
+}
+table, th, td {
+   border: 1px solid white;
+
+}
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+	text-align: center;
+    vertical-align: bottom;
+padding: 15px;
+}
+td{
+padding: 15px;
+}
+tr:nth-child(even) {background-color: #f2f2f2}

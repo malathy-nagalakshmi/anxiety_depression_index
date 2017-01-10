@@ -1,0 +1,142 @@
+
+label {
+    background:black;
+    color:white;
+    border-radius:8px;   
+    padding:1em;
+    margin:1em;
+    cursor:pointer;
+}
+
+label:hover {
+    background:#ccc;   
+}
+
+input {
+    margin-right:1em;   
+}
+div {
+
+float:left;
+
+}
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    margin-right: 15px;
+}
+span{
+	position: absolute;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	padding: 3px;
+	color: #FFF;
+	text-align: center;
+	background: red;
+}
+ 
+span:after{
+	content: "no"; /*if CSS is disabled span elements are not displayed*/
+}
+ 
+input{
+	position: absolute;
+	right: 0;
+	margin: 0;
+	width: 31px;
+	height: 31px;
+	/*hide the radio button*/
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+        cursor: pointer;
+}
+ 
+input[type="radio"] + span{ /*the span element that immediately follow the radio button */
+	visibility: hidden; /*temporarily hide the "YES" label*/
+	background: green;
+}
+ 
+input[type="radio"] + span:after{
+	content: "yes";
+}
+ 
+ 
+input[type="radio"]:checked + span{
+	visibility: visible; /*show the "YES" label only if the radio button is checked*/
+}
+
+body{
+background-image:url("background_2.jpg");
+color:white;
+
+}
+
+
+
+li{
+height:25%;
+
+}
+
+
+
+
+
+/*html, body {margin: 0; height: 100%; overflow: hidden}*/
+
+
+
+
+
+
+
+
+
+/*zoom onclick*/
+div:hover {      
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);    
+}
+
+h1{
+background-image:url("background_2.jpg");
+color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
