@@ -50,36 +50,9 @@ $link = mysqli_connect("localhost", "root", "qwerty123","demo");
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
- 
-
-//extract($_POST);
-//$sql="select first_name,last_name from info";
-//$result=mysqli_query($link,$sql);
-//$fname = mysqli_real_escape_string($link, $_POST['fname']);
-//$lname = mysqli_real_escape_string($link, $_POST['lname']);
-//echo'value='. $_SESSION['fname'];
 $fname=$_SESSION['fname'];
 $lname=$_SESSION['lname'];
 $sql = "UPDATE persons SET score1='$sum' WHERE first_name='$fname' AND last_name='$lname'";
-/*if(mysqli_query($link, $sql)){
-    echo "Records were updated successfully.";
-} else {
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 printf("<h1>Thank you %s %s for taking sometime out for yourselfYour Score is %d out of 36<h1>",$fname,$lname,$sum);
 
@@ -97,13 +70,7 @@ $link = mysqli_connect("localhost", "root", "qwerty123","demo");
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-/*$sql = "INSERT INTO persons (person_id, first_name, last_name, email_address,score) VALUES (2, 'Peterr', 'Parkerr', 'peterrparker@mail.com',$sum)";
-if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}*/
+
 
 ?>
 
