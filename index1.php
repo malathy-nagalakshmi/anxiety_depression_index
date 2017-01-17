@@ -2,94 +2,34 @@
 	session_start();
 	$_SESSION['loggedin']=true;
 
-	$link = mysqli_connect("localhost", "root", "qwerty123","demo");
+	$link = mysqli_connect("localhost", "root", "","demo");
  
-// Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-/*$sql = "CREATE TABLE info(person_id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT, first_name CHAR(30) NOT NULL, last_name CHAR(30) NOT NULL, email_address VARCHAR(50),password varchar(20))";
+$sql = "CREATE TABLE info(person_id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT, first_name CHAR(30) NOT NULL, last_name CHAR(30) NOT NULL, email_address VARCHAR(50),password varchar(20))";
 if (mysqli_query($link, $sql)){
     echo "Table persons created successfully";
-} else {
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}*/
-/*$fname = mysqli_real_escape_string($link, $_POST['fname']);
-
-$lname = mysqli_real_escape_string($link, $_POST['lname']);
-$email = mysqli_real_escape_string($link, $_POST['email']);
-$password= mysqli_real_escape_string($link, $_POST['password']);*/
-
-
-
-
-
-
-
-
-
-//$email = mysqli_real_escape_string($link, $_POST['email']);
-//$fname = mysqli_real_escape_string($link, $_POST['fname']);
-//$lname = mysqli_real_escape_string($link, $_POST['lname']);
+}
 $password= mysqli_real_escape_string($link, $_POST['password1']);
 $email=$_SESSION['email'];
-
-
 $sql = "SELECT first_name FROM info1 WHERE email_address='$email'";
 if($result = mysqli_query($link, $sql)){
    
- $row = mysqli_fetch_assoc($result);
+        $row = mysqli_fetch_assoc($result);
 	$fname=$row['first_name'];
-	//$lname=$row['last_name'];
-   
-
-
-
-$_SESSION['fname']=$fname;
+	$_SESSION['fname']=$fname;
 }
-//$_SESSION['lname']=$lname;
+
 
 $sql2 = "SELECT last_name FROM info WHERE email_address='$email'";
 if($result2 = mysqli_query($link, $sql2)){
    
- $row2 = mysqli_fetch_assoc($result2);
+        $row2 = mysqli_fetch_assoc($result2);
 	$lname=$row2['last_name'];
-	//$lname=$row['last_name'];
-   
-
-
-
-//$_SESSION['fname']=$fname;
-$_SESSION['lname']=$lname;
+	$_SESSION['lname']=$lname;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*$_SESSION['fname']=$fname;
-		$_SESSION['lname']=$lname;
-		$_SESSION['email']=$email;
-		$_SESSION['password']=$password;*/
-
-
-
-
- 
-
 mysqli_close($link);
 ?>
 	
@@ -153,9 +93,5 @@ if($_SESSION['loggedin'])
 <div class="Bottom_part">
 	<div class=""></div>
 </div>
-
-
-
-
 </body>
 </html>
