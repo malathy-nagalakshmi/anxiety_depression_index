@@ -58,42 +58,9 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
  
-
-//extract($_POST);
-//$sql="select first_name,last_name from info";
-//$result=mysqli_query($link,$sql);
-//$fname = mysqli_real_escape_string($link, $_POST['fname']);
-//$lname = mysqli_real_escape_string($link, $_POST['lname']);
-//echo'value='. $_SESSION['fname'];
 $fname=$_SESSION['fname'];
 $lname=$_SESSION['lname'];
 $sql = "UPDATE persons SET score='$sum' WHERE first_name='$fname' AND last_name='$lname'";
-/*if(mysqli_query($link, $sql)){
-    echo "Records were updated successfully.";
-} else {
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 printf("<h1>Thank you %s %s for taking sometime out for yourself \n Your Score is %d out of 28</h1>",$fname,$lname,$sum);
 
