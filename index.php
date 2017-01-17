@@ -7,12 +7,10 @@
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-/*$sql = "CREATE TABLE info2(person_id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT, first_name CHAR(30) NOT NULL, last_name CHAR(30) NOT NULL, email_address VARCHAR(50),password varchar(20))";
+$sql = "CREATE TABLE info2(person_id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT, first_name CHAR(30) NOT NULL, last_name CHAR(30) NOT NULL, email_address VARCHAR(50),password varchar(20))";
 if (mysqli_query($link, $sql)){
     echo "Table persons created successfully";
-} else {
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}*/
+}
 $fname = mysqli_real_escape_string($link, $_POST['fname']);
 
 $lname = mysqli_real_escape_string($link, $_POST['lname']);
@@ -24,19 +22,9 @@ $_SESSION['fname']=$fname;
 		$_SESSION['email']=$email;
 		$_SESSION['password']=$password;
 
-//$_SESSION['loggedin']=true;
-
-
  
 $sql = "INSERT INTO persons (first_name, last_name, email_address,password) VALUES ('$fname', '$lname', '$email','$password')";
-/*if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}*/
-//$_SESSION['fname']=$fname;
- 
-// close connection
+
 mysqli_close($link);
 ?>
 	
@@ -99,9 +87,5 @@ if($_SESSION['loggedin'])
 <div class="Bottom_part">
 	<div class=""></div>
 </div>
-
-
-
-
 </body>
 </html>
