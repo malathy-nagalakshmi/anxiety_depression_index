@@ -6,7 +6,6 @@ body{
   font-family:arial,sans-serif;
   font-size:100%;
   margin:3em;
-  /*background:#666;*/
   color:#fff;
   background-image:url("background_2.jpg");
 }
@@ -115,24 +114,11 @@ ul li a{
   -webkit-transition:-webkit-transform .15s linear;
 }
 ul li:nth-child(even) a{
- /* -o-transform:rotate(4deg);
-  -webkit-transform:rotate(4deg);
-  -moz-transform:rotate(4deg);
-  position:relative;
-  top:5px;*/
   background:#cfc;
 }
 ul li:nth-child(3n) a{
- /* -o-transform:rotate(-3deg);
-  -webkit-transform:rotate(-3deg);
-  -moz-transform:rotate(-3deg);
-  position:relative;
-  top:-5px;*/
   background:#ccf;
 }
-
-
-
 
 p {
   font-family: 'Satisfy';
