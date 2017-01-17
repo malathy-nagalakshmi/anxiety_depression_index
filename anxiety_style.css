@@ -40,7 +40,7 @@ span{
 }
  
 span:after{
-	content: "no"; /*if CSS is disabled span elements are not displayed*/
+	content: "no"; 
 }
  
 input{
@@ -84,20 +84,6 @@ height:25%;
 
 }
 
-
-
-
-
-/*html, body {margin: 0; height: 100%; overflow: hidden}*/
-
-
-
-
-
-
-
-
-
 /*zoom onclick*/
 div:hover {      
   -webkit-transform: scale(1.4);
@@ -111,32 +97,3 @@ h1{
 background-image:url("background_2.jpg");
 color:white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
